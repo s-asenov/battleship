@@ -1,0 +1,161 @@
+html, body {
+    height: 100%;
+    font-family: arial, sans-serif;
+}
+
+.center-div {
+    width: 50%;
+    height: 30%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    padding: 15px;    
+}
+
+#start-form {
+    background-color: blue;
+}
+
+#win-div {
+    padding: 15px;
+    box-shadow: 20px 12px 15px 0 rgba(0,0,0,0.6);
+    border-radius: 25px;
+    height: 300px;
+    line-height: 300px;
+    text-align: center;
+    background-color: rgba(255, 120, 0, 0.9);
+}
+
+[class*="input"] {
+    height: 45px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    width: 45%;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.input-1 {
+    margin-right: 30px;
+}
+
+.checkbox-wrapper {
+    display: block;
+    width: 100%;
+}
+
+#start-form .button-wrapper {
+    position: absolute;
+    bottom: 15px;
+}
+
+.button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 30px);
+}
+
+.button {
+    width: 60%;
+    height: 60px;
+    border-radius: 30px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,9,1) 36%, rgba(115,0,255,1) 100%);
+    color: white;
+    font-weight: 600;
+    display: block;
+}
+
+.play-table {
+    border-collapse: collapse;
+    width: 100%;
+    height: 60vh;
+    display: inline-table;
+    margin-top: 50px
+}
+
+.play-table td {
+    border: 1px solid black;
+    background-color: rgba(123, 123, 123, 0.3);
+    cursor: pointer;
+}
+
+.play-table .miss {
+    background-color: red;
+    cursor: default;
+}
+
+.play-table .hit {
+    background-color: gold;
+    cursor: default;
+}
+
+.player-field {
+    width: calc(50% - 150px);
+    padding: 75px;
+}
+
+.player-field.left {
+    float: left;
+}
+
+.player-field.right {
+    float: right;
+}
+
+.turn-arrow {
+    height: 30px;
+    -ms-transform: rotate(90deg); /* IE 9 */
+    transform: rotate(90deg);
+    background: url('./slider-arrow.png') no-repeat center center / 30px;
+    pointer-events: none;
+}
+
+[id*="fleet-"] {
+    border-collapse: collapse; 
+    margin-top: 5px;
+    width: 40%;
+    height: 30px;
+    float: left;
+    background-color: black;
+}
+
+.player-field.left #fleet-1-hp {
+    float: left;
+}
+
+.player-field.right #fleet-2-hp {
+    float: right;
+}
+
+@media only screen and (max-width: 768px) {
+    [class*="input"] {
+        width: 100%;
+    }
+
+    .input-1 {
+        margin-right: 0px;
+    }
+
+    /* .play-table {
+        width: 80%;
+        padding: 25px;
+    } */
+
+    #table-1 {
+        margin-bottom: 75pxpx;
+    }
+    
+
+    .player-field {
+        width: calc(100% - 50px);
+        padding: 25px;
+    }
+}

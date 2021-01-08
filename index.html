@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Battleship</title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>	
+	<form id="start-form" class="center-div">
+		<input class="input-1" type="text" id="player-one-input" placeholder="Player One" required="true">
+		<input class="input" style="display: none" type="text" id="player-two-input" placeholder="Player Two">
+		<div class="checkbox-wrapper">
+			<input type="checkbox" id="checkbox" name="checkbox">
+			<label id="checkbox-label" for="checkbox">Multiplayer</label>
+		</div>
+		<div class="button-wrapper">
+			<input type="submit" class="button" id="start-btn" value="START GAME">
+		</div>
+		
+	</form>
+
+	<div class="button-wrapper">
+		<button class="button" style="display: none" id="restart-btn">restart button</button>
+	</div>	
+	<div class="player-field left" style="display: none;">
+		<div class="turn-arrow"></div>
+		<table id="fleet-1-hp"></table>
+		<table id="table-1" class="play-table"></table>
+	</div>
+	
+	<div class="player-field right" style="display: none;">
+		<div class="turn-arrow"></div>
+		<table id="fleet-2-hp"></table>
+		<table id="table-2" class="play-table"></table>
+	</div>
+	<div id="win-div" class="center-div" style="display: none">
+	</div>
+	<script src="./bundle.js"></script>
+</body>
+</html>
